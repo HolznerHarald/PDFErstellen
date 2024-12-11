@@ -8,10 +8,25 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel Name="Doc">
         <Menu DockPanel.Dock="Top">
+            
+            <MenuItem Header="_Text-PDF aus JPGs">
+                <MenuItem Header="_1. All PH*.JPGs in PDF" Click="AllJPGsInPDF"/>
+                <MenuItem Header="_2. Recognice mit gImagereader" Click="Empty"/>
+                <MenuItem Header="_3. Untitled 1.txt in Buch.pdf kopieren" Click="untitled1InBuchPDF"/>
+            </MenuItem>
             <MenuItem Header="_Testen">
-                <MenuItem Header="_Test1" Click="Test1_Click"/>
-                <MenuItem Header="_JPGs in PDF" Click="Test2_Click"/>
+                <MenuItem Header="_Create simple PDF" Click="CreateSimplePDF"/>
+                <MenuItem Header="_All JPGs in PDF" Click="AllJPGsInPDF"/>
+                <MenuItem Header="_untitled1 ausgeben" Click="untitled1Ausgeben"/>
+                <MenuItem Header="_untitled1+HexCode" Click="untitledHexCode"/>
+                <MenuItem Header="_Halö+HexCode" Click="HallöHexCode"/>
+                <MenuItem Header="_untitled1 in Buch.PDF" Click="untitled1InBuchPDF"/>
+                <MenuItem Header="_Char + Byte-Wert von Untitled1" Click="CharByteWert"/>
             </MenuItem>
         </Menu>
+        <TextBox  Grid.Row="1"   x:Name="Ausgabe" VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Auto"
+        IsReadOnly="True"
+        Margin="5"/>
     </DockPanel>
 </Window>
